@@ -1,0 +1,4 @@
+Junit - it is used for unit testing in java.
+Unit testing and testing is different. 
+Testing is practiced post-development while the unit testing is done furing the development.
+one unit is always referred to as one method or group of methods or even group of class.
