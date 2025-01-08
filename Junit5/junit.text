@@ -14,6 +14,12 @@ a Test Environment, write Test Methods...)
 => Provide expected output
 => Perform Assertion (verify
 the result)
+
 JUNIT5
 Report Test Results (Alert Developer if test is failed (or) passed)
 
+@Test 
+-> Applied over methods to mark method as test
+-> org.junit jupiter api 
+-> Visibility of @Test Annotated method can be public protected default.
+-> Also, informs test engine what method needs to run
