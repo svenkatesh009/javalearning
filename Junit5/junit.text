@@ -23,3 +23,13 @@ Report Test Results (Alert Developer if test is failed (or) passed)
 -> org.junit jupiter api 
 -> Visibility of @Test Annotated method can be public protected default.
 -> Also, informs test engine what method needs to run
+
+Assertions-
+Expectations VS Actual output (Reality)
+if -> Expectations == Actual output => Test case
+Expectations ! = Actual output => Test case X
+else ->
+Assertions Y static methods eg:- assertEquals (expic, actual)
+assert Array Equals (exp, actual)
+org • junit •jupiter.Assertions class
+supports features of Java 8 (Lambda exp Stream API)
