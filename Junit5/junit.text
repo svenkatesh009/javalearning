@@ -33,3 +33,135 @@ Assertions Y static methods eg:- assertEquals (expic, actual)
 assert Array Equals (exp, actual)
 org • junit •jupiter.Assertions class
 supports features of Java 8 (Lambda exp Stream API)
+
+=> Write test then code => Test Driven Development
+
+Example:
+class Shapes Test {
+Shapes shape=new Shapes ();
+° @Test
+void testcomputeSquareArea()
+{
+assertEquals(576, shape.computeSquareArea(24));
+}
+° @Test
+void testcomputeCircleArea()
+{
+assertEquals(76.5, shape.compute CircleArea(5), "Area of circle calculation is wrong");
+}
+@Test
+void testcomputeCircleArea_Supplier()
+{
+    assertEquals(74.5, shape.computeCircleArea(5), ()->"Area of circle calculation is wrong");
+}
+}
+
+the diff between two methods above is the supplier function is used where the msg is evaluated only if the test case is failed where as the before method the msg is evaluated even if the test is passed and the second one is efficient.
+
+@Test
+void test()
+{
+assertTrue(true);
+}
+checking whether it is true or false.
+
+Assertions assert Array Equals () method
+Actual and expected arrays are equal.
+Number elements should match.
+Elements of an array are equal.
+Order of elements in an array .
+
+Example:
+// try
+// {
+SortingArray array=new SortingArray();
+// int unsorted [] = {2,5,3};
+// int sortedArray[]=array.sortingArray(unsorted);
+// for (int elem: sortedArray)
+// {
+// System.out.print(elem);
+// }
+// System.out.println("Statements below exception");
+// fail();
+// }
+// catch (NullPointerException e)
+// {
+// System.out.println("Exception generated");
+// } I
+//
+int unsorted [] = null;
+assertThrows (NullPointerException.class, ()-> array.sorting Array (unsorted))
+
+
+checking the duration of unit
+example:
+package com.learning;
+import java.util.Arrays;
+public class SortingArray
+{
+public int[] sorting Array(int[] array)
+{
+for(int i=0; i<1000000; i++)
+Arrays.sort(array);
+}
+return array;
+}
+
+class TestingPerformance {
+@Test
+void testSortingMethod_Performance()
+{
+SortingArray array=new SortingArray();
+int unsorted[] = {2,5,1};
+assertTimeout(Duration.ofMillis(1), ()-> array.sortingArray(unsorted))
+}
+}
+
+the test passes if it is in 1 milli seconds.  assertTimeout is used in junit5 not in junit4.
+
+
+whenever each test unit is called new object is created everytime, inorder to invoke the object creation this is used.
+beforeeach annotation is invoked everytime before every test method is invoked.
+Shapes shape;
+@BeforeEach
+void init()
+{
+shape=new Shapes();
+System.out.println("Before test");
+}
+
+Aftereach - is used to cleanup process like closing the resources.
+@AfterEach
+void destroy()
+{
+System.out.println("After test clean up");
+}
+
+BeforeAll- is called before all. It should be static. It may be called for the connection of db before all.It is even called before the instance of the class where it is located.
+@BeforeALL
+static void beforeAll()
+{
+System.out.println("Before all test");
+}
+
+AfterAll- is called after all.
+@AfterALL
+static void afterAll()
+{
+System.out.println("after all test");
+}
+
+the number of @test is present then it means that the same number of objects are created for the class it is located.
+example if 5 @test annotation is presented then 5 object is created.
+to know that use.
+
+contructor()
+{
+System.out.println("Test obj is created before test method");
+}
+
+in order to avoid this use , after this only one object is craeted and the static can be removed from the befroe all and after all.
+@TestInstance(TestInstance.Lifecycle.PER_CLASS)
+class Test Before AllAfter AL1
+{
+I}
