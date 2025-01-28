@@ -1,0 +1,2 @@
+git --version      - gives version of the git
+git init            -initialize the repository to the working directory
