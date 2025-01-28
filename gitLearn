@@ -17,5 +17,5 @@ diff command:
 git diff - to see diff before stagging between the old and new
 git diff --staged          - to see diff after staged between the old and new
 
-to remove the file from repo:
+to remove/delete the file from repo:
 git rm --cached filename 
