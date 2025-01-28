@@ -1,2 +1,3 @@
 git --version      - gives version of the git
-git init            -initialize the repository to the working directory
+git init            -initialize the local repository to the working directory
+git init -b main    - this initialize the local repository and creates a branch main.
