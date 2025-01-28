@@ -1,3 +1,6 @@
+git config --global --list   - to know the user.email and user.name
+git config --global user.name "UserName"
+git config --global user.email "Email"
 git --version      - gives version of the git
 git init            -initialize the local repository to the working directory
 git init -b main    - this initialize the local repository and creates a branch main.
@@ -6,3 +9,10 @@ git commit -m "Message"  - to commit changes inside the local repository with th
 Every commit has a 40-hexdigit id, sometimes called the "object name" or the "SHA-1 id", shown on the first line of the git show output. It is shown in 7 digit short.
 
 git log          -  shows the number of commits done with commit ID, author name, Date
+
+to skip stagging:
+git commit -a -m "Message"
+
+diff command:
+git diff - to see diff before stagging between the old and new
+git diff --staged          - to see diff after staged between the old and new
