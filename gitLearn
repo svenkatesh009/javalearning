@@ -4,3 +4,5 @@ git init -b main    - this initialize the local repository and creates a branch 
 git add {.filename}  - it indiactes that the file is taken to staging area .
 git commit -m "Message"  - to commit changes inside the local repository with the message.
 Every commit has a 40-hexdigit id, sometimes called the "object name" or the "SHA-1 id", shown on the first line of the git show output. It is shown in 7 digit short.
+
+git log          -  shows the number of commits done with commit ID, author name, Date
