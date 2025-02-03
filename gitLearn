@@ -47,3 +47,6 @@ going back to previous branch : git switch -
 deleting the branch : git branch -d branchname
 to see/switch the branch in vscode : git-course % git switch main / git-course % git switch branchname
 to push the new branch in github : git push origin branchname
+
+to merge two branches:
+before merging the branch we need to be in main then : git merge branchname
