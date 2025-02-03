@@ -19,3 +19,14 @@ git diff --staged          - to see diff after staged between the old and new
 
 to remove/delete the file from repo:
 git rm --cached filename 
+
+to generate ssh key:
+ssh-keygen -o
+
+to see the push and fetch:
+git remote -v
+
+tagging - it is the version , tag is version num for each commit
+git tag    - it shows all the tag till now
+to give tag : git tag -a v1.0 -m "1st version"
+to get description for tag: git show v1.0
