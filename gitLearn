@@ -30,3 +30,8 @@ tagging - it is the version , tag is version num for each commit
 git tag    - it shows all the tag till now
 to give tag : git tag -a v1.0 -m "1st version"
 to get description for tag: git show v1.0
+to push tag also : git push origin v1.0
+
+
+to see the log and commits:
+git log --pretty=oneline
