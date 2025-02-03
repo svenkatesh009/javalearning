@@ -5,3 +5,8 @@
 how to display all the value :
 ![image](https://github.com/user-attachments/assets/000e1503-2254-4b33-aa3c-edfdc50ca82e)
 
+insert data using statement:
+![image](https://github.com/user-attachments/assets/f267366a-35ee-4d18-ae2a-c37411131c31)
+
+insert values using prepared statements:
+![image](https://github.com/user-attachments/assets/5bb431c5-326b-49f6-bae1-aba8572a33f3)
