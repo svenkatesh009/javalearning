@@ -35,3 +35,14 @@ to push tag also : git push origin v1.0
 
 to see the log and commits:
 git log --pretty=oneline
+
+to create a new branch:
+git checkout -b branchname / git switch -c branchname
+to shift between branch :
+git checkout branchname / git switch branchname
+to see branches: git branch
+to see all branches and local branches : git branch --all
+going back to previous branch : git switch -
+deleting the branch : git branch -d branchname
+to see/switch the branch in vscode : git-course % git switch main / git-course % git switch branchname
+to push the new branch in github : git push origin branchname
