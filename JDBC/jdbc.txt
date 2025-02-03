@@ -5,7 +5,7 @@ Steps for JDBC
 1) import the package (java.sql.*)
 2)Load and register the driver
   a-load------> before that we need to download a jar file named mysql-connector , which is inbult in netbeans.
-  b-register ----> forName("com.mysql.jdbc.driver")
+  b-register ----> Class.forName("com.mysql.jdbc.driver")
 3)establish the connection - initiate the interface called connection.
 4)create the statement 
   Statement-
@@ -16,3 +16,5 @@ Steps for JDBC
 7)close
 
 for inserting the resultset should be like : int count=st.executeUpdate(query).
+Class.forName() is used to load and register driver.
+DAO - Data Access Object
