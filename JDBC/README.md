@@ -10,3 +10,10 @@ insert data using statement:
 
 insert values using prepared statements:
 ![image](https://github.com/user-attachments/assets/5bb431c5-326b-49f6-bae1-aba8572a33f3)
+
+DAO:
+![image](https://github.com/user-attachments/assets/a769190f-16f1-4f04-bc08-9cfb252b9838)
+![image](https://github.com/user-attachments/assets/eb68202c-1bda-4948-910b-507c9781c3cc)
+![image](https://github.com/user-attachments/assets/849c8785-cb2c-4d20-9c5a-10123b10ba97)
+![image](https://github.com/user-attachments/assets/e583f75b-778d-4b21-ba7b-18461f27771d)
+
