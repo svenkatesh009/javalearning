@@ -1,0 +1,2 @@
+whenever the request comes to the server it sees it as the dynamic page and then send to the web container then it maps the request to the servelet using the Deployment descriptor web.xml .
+Servelet is java file which can take the request from the client and process the request and it can give the response in html page.
