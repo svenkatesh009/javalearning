@@ -49,3 +49,18 @@ HttpSession hp=req.getSession();
 hp.setAttribute("k",k);
 
 res.sendRedirect("sq");
+
+Cookies:
+In servlet side:
+   A side:
+   		Cookie cookie = new Cookie("k", k +I"");
+		res.addCookie(cookie);
+		res.sendRedirect("sq");
+   B sdie:
+	       int k = 0;
+		Cookie cookies= req.getCookies();
+		for(Cookie c : cookies)
+		{
+		if(c.getName().equals("k"))
+		k = Integer.parseInt(c.getValue())};
+		}
