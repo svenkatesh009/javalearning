@@ -64,3 +64,104 @@ In servlet side:
 		if(c.getName().equals("k"))
 		k = Integer.parseInt(c.getValue())};
 		}
+
+Servlet config & Servletcontext:
+
+Servlet config:
+1. Define Initialization Parameters in web.xml
+xml
+Copy
+Edit
+<servlet>
+    <servlet-name>MyServlet</servlet-name>
+    <servlet-class>com.example.MyServlet</servlet-class>
+    <init-param>
+        <param-name>databaseURL</param-name>
+        <param-value>jdbc:mysql://localhost:3306/mydb</param-value>
+    </init-param>
+    <init-param>
+        <param-name>username</param-name>
+        <param-value>admin</param-value>
+    </init-param>
+</servlet>
+2. Access ServletConfig in Java Servlet
+java
+Copy
+Edit
+import java.io.IOException;
+import java.io.PrintWriter;
+import javax.servlet.ServletConfig;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class MyServlet extends HttpServlet {
+    private String dbURL;
+    private String dbUser;
+
+    public void init(ServletConfig config) throws ServletException {
+        super.init(config);
+        dbURL = config.getInitParameter("databaseURL");
+        dbUser = config.getInitParameter("username");
+    }
+
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) 
+            throws ServletException, IOException {
+        response.setContentType("text/html");
+        PrintWriter out = response.getWriter();
+
+        out.println("<html><body>");
+        out.println("<h3>Database URL: " + dbURL + "</h3>");
+        out.println("<h3>Username: " + dbUser + "</h3>");
+        out.println("</body></html>");
+    }
+}
+
+Servlet context:
+1. Define Context Parameters in web.xml
+xml
+Copy
+Edit
+<context-param>
+    <param-name>databaseURL</param-name>
+    <param-value>jdbc:mysql://localhost:3306/mydb</param-value>
+</context-param>
+
+<context-param>
+    <param-name>username</param-name>
+    <param-value>admin</param-value>
+</context-param>
+2. Access Context Parameters in a Servlet
+java
+Copy
+Edit
+import java.io.IOException;
+import java.io.PrintWriter;
+import javax.servlet.ServletContext;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class MyServlet extends HttpServlet {
+    private String dbURL;
+    private String dbUser;
+
+    public void init() throws ServletException {
+        ServletContext context = getServletContext();
+        dbURL = context.getInitParameter("databaseURL");
+        dbUser = context.getInitParameter("username");
+    }
+
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) 
+            throws ServletException, IOException {
+        response.setContentType("text/html");
+        PrintWriter out = response.getWriter();
+
+        out.println("<html><body>");
+        out.println("<h3>Database URL: " + dbURL + "</h3>");
+        out.println("<h3>Username: " + dbUser + "</h3>");
+        out.println("</body></html>");
+    }
+}
